@@ -274,7 +274,17 @@
             resultCount.textContent = `${wordsToDisplay.length} word${wordsToDisplay.length !== 1 ? 's' : ''}`;
         }
 
-        // Aif (words.some(w => w.toLowerCase() === newWord.toLowerCase())) {
+        // Add a new word to the list
+        async function addWord() {
+            const newWordInput = document.getElementById('newWordInput');
+            const newWord = newWordInput.value.trim();
+
+            if (newWord === '') {
+                alert('Please enter a word');
+                return;
+            }
+
+            if (words.some(w => w.toLowerCase() === newWord.toLowerCase())) {
                 alert('This word is already in the list');
                 return;
             }
@@ -290,17 +300,7 @@
             additionalWords.push(newWord);
             localStorage.setItem('additionalWords', JSON.stringify(additionalWords));
             
-            console.log('Word saved to localStorage');       words.push(newWord);
-                    newWordInput.value = '';
-                    searchWords();
-                    console.log('Word saved to words.txt');
-                } else {
-                    alert(data.error || 'Failed to add word');
-                }
-            } catch (error) {
-                console.error('Error adding word:', error);
-                alert('Failed to add word to server');
-            }
+            console.log('Word saved to localStorage');
         }
 
         // Initialize the app
