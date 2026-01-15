@@ -1,4 +1,3 @@
-Bee words
 Olio
 Oleo
 Fife
@@ -161,14 +160,12 @@ Fugu
 Tope
 Kente
 Loge
-Logy 
 Geoid 
 Plena 
 Imam
 Loblolly
 Oleic
 Annatto 
-Piton
 Baht
 Cairn
 —Amica
@@ -210,7 +207,6 @@ Canna
 Cannula
 Burbot
 Tallit
-Iliac
  Piton
 Boho
 Mammon
@@ -253,10 +249,8 @@ Celli
 Myelin
 Cicely
 Taiga
-Lantana
 Indium
 Dacha
-Galangal
 Endue
 Ennead
 Dimity 
@@ -278,7 +272,6 @@ Maki
 Maraca
 Moor
 Gorp 
-Dyad 
 Rani 
 Arroyo
 Aria
@@ -303,7 +296,6 @@ Pawpaw
 Rapini
 Linidinal
 Bindi
-Lipo 
 Diode
 Dogie
 Gelid
