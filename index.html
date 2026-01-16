@@ -167,8 +167,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bee Words Finder</h1>
-        <p class="subtitle">Find words that can be formed using only the letters you provide</p>
+        <h1>🐝 Bee Words Finder</h1>
+        <p class="subtitle">Find words using the first letter (required) and other available letters</p>
 
         <div class="search-section">
             <div class="input-group">
@@ -224,14 +224,23 @@
             }
         }
 
-        // Check if a word contains all letters from the query
+        // Check if a word can be formed with the query letters
         function canFormWord(word, query) {
-            const queryLetters = new Set(query.toLowerCase());
-            const wordLetters = new Set(word.toLowerCase());
+            if (!query) return true;
             
-            // Word must contain all letters from the query
-            for (const letter of queryLetters) {
-                if (!wordLetters.has(letter)) {
+            const queryLower = query.toLowerCase();
+            const wordLower = word.toLowerCase();
+            const firstLetter = queryLower[0];
+            const allowedLetters = new Set(queryLower);
+            
+            // Word MUST contain the first letter of the query
+            if (!wordLower.includes(firstLetter)) {
+                return false;
+            }
+            
+            // Word can ONLY contain letters from the query
+            for (const letter of wordLower) {
+                if (!allowedLetters.has(letter)) {
                     return false;
                 }
             }
