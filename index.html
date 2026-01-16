@@ -257,6 +257,12 @@
                 return;
             }
 
+            if (query.length < 7) {
+                document.getElementById('wordList').innerHTML = '<div class="no-results">Enter all 7 letters to search</div>';
+                document.getElementById('resultCount').textContent = '0 words';
+                return;
+            }
+
             const filteredWords = words.filter(word => canFormWord(word, query));
             displayWords(filteredWords);
         }
